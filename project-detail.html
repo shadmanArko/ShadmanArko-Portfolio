@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/040e13379b.js" crossorigin="anonymous"></script>
+    <title>Project Detail - Shadman Shahriar Hasan Arko</title>
+</head>
+<body>
+<div id="project-header">
+    <div class="container">
+        <nav>
+            <h1 class="logoText"><span>Shadman</span> Shahriar Hasan <span>Arko</span></h1>
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<div id="project-detail">
+    <div class="container">
+        <h1 class="sub-title">Project Name</h1>
+        <div class="project-info">
+            <img src="images/project-image.png" alt="Project Image">
+            <div class="project-details">
+                <p><strong>Project Link:</strong> <a href="project-link" target="_blank">View Project</a></p>
+                <p><strong>Role:</strong> My role in the project</p>
+                <p><strong>Technologies Used:</strong> List of technologies</p>
+                <p><strong>Responsibilities:</strong> Detailed description of what I have done</p>
+                <p><strong>Company:</strong> Company name</p>
+                <p><strong>Delivered to:</strong> Client or platform where it was delivered</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright © Shadman Arko</p>
+</div>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

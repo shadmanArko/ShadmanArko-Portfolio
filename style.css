@@ -13,8 +13,7 @@ body
     color: #fff;
 }
 
-#header
-{
+#header {
     width: 100%;
     height: 100vh;
     background-image: url(images/background.png);
@@ -319,6 +318,89 @@ form .btn2{
     font-weight: 300;
     margin-top: 20px;
 }
+
+/*----------------------project details----------------------*/
+/* New header style for project detail page */
+#project-header {
+    width: 100%;
+    background: #080808; /* Ensure a solid background color */
+}
+
+/* Additional styles to ensure no overlap */
+#project-detail {
+    padding: 50px 0;
+    background: #080808; /* Match the overall background color */
+}
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.project-info img {
+    flex-basis: 45%;
+    border-radius: 10px;
+    max-width: 100%;
+}
+.project-details {
+    flex-basis: 45%;
+}
+.project-details p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #ababab;
+}
+.project-details p strong {
+    color: #fff;
+}
+.project-details a {
+    color: #ff004f;
+    text-decoration: none;
+}
+.project-details a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for navigation menu */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* General body and container styles */
+body {
+    background: #080808;
+    color: #fff;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
 /*----------------css for small screen-----------------*/
 nav .fa-solid {
     display: none;
