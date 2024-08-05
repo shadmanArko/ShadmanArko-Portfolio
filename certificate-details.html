@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/040e13379b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navigation Menu -->
+<div id="project-header">
+    <div class="container">
+        <nav>
+            <h1 class="logoText"><span>Shadman</span> Shahriar Hasan <span>Arko</span></h1>
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#certificates">Certificates</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!-- Certificate Details Section -->
+<section id="certificate-details">
+    <div class="container">
+        <div class="certificate-info">
+            <img id="certificate-image" src="" alt="Certificate Image">
+            <div class="certificate-details-content">
+                <h3 id="certificate-title"></h3>
+                <p><strong>Issued by:</strong> <span id="certificate-issuer"></span></p>
+                <p><strong>Issue Date:</strong> <span id="certificate-issue-date"></span></p>
+                <p><strong>Credential ID:</strong> <span id="certificate-id"></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Fetch and display certificate details
+    fetch('certificates.json')
+        .then(response => response.json())
+        .then(certificates => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const certificateId = urlParams.get('id');
+            const certificate = certificates.find(cert => cert.id === certificateId);
+
+            if (certificate) {
+                document.getElementById('certificate-image').src = certificate.image;
+                document.getElementById('certificate-title').textContent = certificate.title;
+                document.getElementById('certificate-issuer').textContent = certificate.issuer;
+                document.getElementById('certificate-issue-date').textContent = certificate.issueDate;
+                document.getElementById('certificate-id').textContent = certificate.credentialId;
+            }
+        });
+</script>
+</body>
+</html>

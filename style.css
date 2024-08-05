@@ -393,6 +393,116 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 
+#certificates {
+    padding: 80px 0;
+    background: #080808;
+    color: #fff;
+    text-align: center;
+}
+
+.certificates-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.certificate-card {
+    background: #1b1b1b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.certificate-thumbnail {
+    height: 180px;
+    overflow: hidden;
+}
+
+.certificate-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-thumbnail img {
+    transform: scale(1.1);
+}
+
+.certificate-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.certificate-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.certificate-info p {
+    font-size: 16px;
+    color: #ababab;
+    margin-bottom: 5px;
+}
+#certificate-details {
+    padding: 80px 0;
+    background: #080808;
+    color: #fff;
+    text-align: center;
+}
+
+.certificate-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.certificate-info img {
+    flex-basis: 45%;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.certificate-details-content {
+    flex-basis: 45%;
+    text-align: left;
+}
+
+.certificate-details-content h3 {
+    font-size: 30px;
+    color: #ff004f;
+    margin-bottom: 15px;
+}
+
+.certificate-details-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ababab;
+}
+
+.certificate-details-content p strong {
+    color: #fff;
+}
+
+
+
 /* Portfolio Section */
 #portfolio {
     padding: 50px 0;
@@ -568,6 +678,11 @@ form .btn2 {
     align-items: center;
     color: #fff;
     text-align: center;
+}
+.project-info img{
+    flex-basis: 45%;
+    border-radius: 10px;
+    max-width: 100%;
 }
 
 .project-info h2 {

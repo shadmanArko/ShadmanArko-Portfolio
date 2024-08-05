@@ -16,6 +16,10 @@
                 <li><a href="index.html#header">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#certificates">Certificates</a></li>
                 <li><a href="index.html#portfolio">Portfolio</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -26,16 +30,16 @@
 </div>
 <div id="project-detail">
     <div class="container">
-        <h1 class="sub-title">Project Name</h1>
+        <h1 class="sub-title" id="project-title">Project Name</h1>
         <div class="project-info">
-            <img src="images/project-image.png" alt="Project Image">
+            <img id="project-image" src="images/project-image.png" alt="Project Image">
             <div class="project-details">
-                <p><strong>Project Link:</strong> <a href="project-link" target="_blank">View Project</a></p>
-                <p><strong>Role:</strong> My role in the project</p>
-                <p><strong>Technologies Used:</strong> List of technologies</p>
-                <p><strong>Responsibilities:</strong> Detailed description of what I have done</p>
-                <p><strong>Company:</strong> Company name</p>
-                <p><strong>Delivered to:</strong> Client or platform where it was delivered</p>
+                <p><strong>Project Link:</strong> <a id="project-link" href="#" target="_blank">View Project</a></p>
+                <p><strong>Role:</strong> <span id="project-role">My role in the project</span></p>
+                <p><strong>Technologies Used:</strong> <span id="project-technologies">List of technologies</span></p>
+                <p><strong>Responsibilities:</strong> <span id="project-responsibilities">Detailed description of what I have done</span></p>
+                <p><strong>Company:</strong> <span id="project-company">Company name</span></p>
+                <p><strong>Delivered to:</strong> <span id="project-delivered">Client or platform where it was delivered</span></p>
             </div>
         </div>
     </div>
@@ -51,6 +55,26 @@
     function closemenu() {
         sidemenu.style.right = "-200px";
     }
+
+    // Fetch and display project details
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(projects => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            const project = projects.find(proj => proj.id === projectId);
+
+            if (project) {
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-image').src = project.image;
+                document.getElementById('project-link').href = project.details.projectLink;
+                document.getElementById('project-role').textContent = project.details.role;
+                document.getElementById('project-technologies').textContent = project.details.technologiesUsed;
+                document.getElementById('project-responsibilities').textContent = project.details.responsibilities;
+                document.getElementById('project-company').textContent = project.details.company;
+                document.getElementById('project-delivered').textContent = project.details.deliveredTo;
+            }
+        });
 </script>
 </body>
 </html>

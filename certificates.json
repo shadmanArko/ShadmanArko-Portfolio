@@ -1,0 +1,18 @@
+﻿[
+  {
+    "id": "unity-certified-developer",
+    "title": "Unity Certified Developer",
+    "issuer": "Unity Technologies",
+    "issueDate": "March 2021",
+    "credentialId": "UC-123456",
+    "image": "images/unity-certificate.jpg"
+  },
+  {
+    "id": "godot-advanced-developer",
+    "title": "Godot Advanced Developer",
+    "issuer": "Godot Organization",
+    "issueDate": "July 2022",
+    "credentialId": "GD-7891011",
+    "image": "images/work-1.png"
+  }
+]

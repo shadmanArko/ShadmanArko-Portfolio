@@ -1,0 +1,32 @@
+﻿[
+  {
+    "id": "alexanderball",
+    "title": "Alexanderball: A Country Ball Tale",
+    "description": "Write some description about this game",
+    "image": "images/work-1.png",
+    "link": "project-detail.html?id=alexanderball",
+    "details": {
+      "projectLink": "project-link",
+      "role": "My role in the project",
+      "technologiesUsed": "List of technologies",
+      "responsibilities": "Detailed description of what I have done",
+      "company": "Company name",
+      "deliveredTo": "Client or platform where it was delivered"
+    }
+  },
+  {
+    "id": "another-project",
+    "title": "Another Project",
+    "description": "Description of another project",
+    "image": "images/work-2.png",
+    "link": "project-detail.html?id=another-project",
+    "details": {
+      "projectLink": "project-link",
+      "role": "My role in the project",
+      "technologiesUsed": "List of technologies",
+      "responsibilities": "Detailed description of what I have done",
+      "company": "Company name",
+      "deliveredTo": "Client or platform where it was delivered"
+    }
+  }
+]
