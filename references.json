@@ -1,0 +1,20 @@
+﻿[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "position": "Senior Developer",
+    "company": "Tech Solutions Ltd.",
+    "date": "June 2023",
+    "details": "John has been a great mentor and colleague...",
+    "letter_image": "path/to/reference-letter-1.png"
+  },
+  {
+    "id": "2",
+    "name": "Jane Smith",
+    "position": "Project Manager",
+    "company": "Innovatech",
+    "date": "April 2022",
+    "details": "Jane's reference highlights my contribution to several key projects...",
+    "letter_image": "path/to/reference-letter-2.png"
+  }
+]

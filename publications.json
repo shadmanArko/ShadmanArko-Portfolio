@@ -1,0 +1,22 @@
+﻿[
+  {
+    "id": "1",
+    "title": "Exploring the Impact of AI in Game Development",
+    "authors": "Shadman Shahriar Hasan Arko, John Doe",
+    "journal": "Journal of Game Development",
+    "issue_date": "March 2023",
+    "abstract": "This paper explores the various impacts of artificial intelligence on modern game development.",
+    "pdf_link": "path/to/pdf",
+    "details": "Detailed information about the research paper..."
+  },
+  {
+    "id": "2",
+    "title": "A Study on Virtual Reality and User Experience",
+    "authors": "Shadman Shahriar Hasan Arko, Jane Smith",
+    "journal": "International Journal of VR Studies",
+    "issue_date": "July 2022",
+    "abstract": "This study investigates how virtual reality technologies affect user experience.",
+    "pdf_link": "path/to/pdf",
+    "details": "Detailed information about the research paper..."
+  }
+]

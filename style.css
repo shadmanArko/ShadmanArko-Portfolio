@@ -501,6 +501,59 @@ nav ul li a:hover::after {
     color: #fff;
 }
 
+/* Publications Section */
+#publications {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background to match the theme */
+}
+
+.publication-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.publication {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.publication h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.publication p {
+    font-size: 16px;
+    color: #555;
+}
+
+.publication a.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff004f; /* Match your theme color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.publication a.btn:hover {
+    background-color: #e60046; /* Darker shade for hover effect */
+}
+
+.publication:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 
 /* Portfolio Section */
@@ -729,6 +782,119 @@ form .btn2 {
     transform: scale(1.05);
 }
 
+/* References Section */
+#references {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background to match the theme */
+}
+
+.reference-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.reference {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.reference h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.reference p {
+    font-size: 16px;
+    color: #555;
+}
+
+.reference a.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff004f; /* Match your theme color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.reference a.btn:hover {
+    background-color: #e60046; /* Darker shade for hover effect */
+}
+
+.reference:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Hobbies Section */
+#hobbies {
+    padding: 50px 0;
+    background-color: #000000; /* Light background to match the theme */
+}
+
+.hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.hobby {
+    background: #262626;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    width: calc(33% - 40px); /* Three cards in a row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobby i {
+    font-size: 50px;
+    color: #ffffff; /* Match your theme color */
+    margin-bottom: 20px;
+}
+
+.hobby h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.hobby p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.hobby:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #ff004f;
+}
+
+@media (max-width: 768px) {
+    .hobby {
+        width: calc(50% - 40px); /* Two cards in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hobby {
+        width: 100%; /* One card in a row on small screens */
+    }
+}
 
 
 /*----------------css for small screen-----------------*/

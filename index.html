@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadman Shahriar Hasan Arko - Portfolio Website</title>
     <link href="style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/040e13379b.js" crossorigin="anonymous"></script>
@@ -288,6 +289,34 @@
             });
     </script>
 
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h1 class="sub-title">Research Papers</h1>
+            <div class="publication-list" id="publication-list">
+                <!-- Publications will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+    <script>
+        // Fetch and display publications
+        fetch('publications.json')
+            .then(response => response.json())
+            .then(publications => {
+                const publicationList = document.getElementById('publication-list');
+                publications.forEach(publication => {
+                    const publicationCard = document.createElement('div');
+                    publicationCard.classList.add('publication');
+                    publicationCard.innerHTML = `
+                        <h3>${publication.title}</h3>
+                        <p><strong>Authors:</strong> ${publication.authors}</p>
+                        <p><strong>Published in:</strong> ${publication.journal}</p>
+                        <a href="publication-detail.html?id=${publication.id}" class="btn">Read More</a>
+                    `;
+                    publicationList.appendChild(publicationCard);
+                });
+            });
+    </script>
 
 
     <!-- Portfolio Section -->
@@ -322,6 +351,67 @@
                 });
             });
     </script>
+
+    <!-- References Section -->
+    <section id="references">
+        <div class="container">
+            <h1 class="sub-title">References</h1>
+            <div class="reference-list" id="reference-list">
+                <!-- References will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Fetch and display references
+        fetch('references.json')
+            .then(response => response.json())
+            .then(references => {
+                const referenceList = document.getElementById('reference-list');
+                references.forEach(reference => {
+                    const referenceCard = document.createElement('div');
+                    referenceCard.classList.add('reference');
+                    referenceCard.innerHTML = `
+                        <h3>${reference.name}</h3>
+                        <p><strong>Position:</strong> ${reference.position}</p>
+                        <p><strong>Company:</strong> ${reference.company}</p>
+                        <a href="reference-detail.html?id=${reference.id}" class="btn">Read More</a>
+                    `;
+                    referenceList.appendChild(referenceCard);
+                });
+            });
+    </script>
+
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <div class="container">
+            <h1 class="sub-title">My Hobbies</h1>
+            <div class="hobby-list" id="hobby-list">
+                <!-- Hobbies will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+    <script>
+        // Fetch and display hobbies
+        fetch('hobbies.json')
+            .then(response => response.json())
+            .then(hobbies => {
+                const hobbyList = document.getElementById('hobby-list');
+                hobbies.forEach(hobby => {
+                    const hobbyCard = document.createElement('div');
+                    hobbyCard.classList.add('hobby');
+                    hobbyCard.innerHTML = `
+                        <i class="fa-solid ${hobby.icon}"></i>
+                        <h3>${hobby.title}</h3>
+                        <p>${hobby.description}</p>
+                    `;
+                    hobbyList.appendChild(hobbyCard);
+                });
+            });
+    </script>
+    
+    
 
     <!------------------------------contact--------------------------------->
     <section id="contact">

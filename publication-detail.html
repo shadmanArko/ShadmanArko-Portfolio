@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/040e13379b.js" crossorigin="anonymous"></script>
+    <title>Publication Detail - Shadman Shahriar Hasan Arko</title>
+</head>
+<body>
+<div id="publication-header">
+    <div class="container">
+        <nav>
+            <h1 class="logoText"><span>Shadman</span> Shahriar Hasan <span>Arko</span></h1>
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<div id="publication-detail">
+    <div class="container">
+        <h1 class="sub-title" id="publication-title">Publication Title</h1>
+        <div class="publication-info">
+            <div class="publication-details" id="publication-details">
+                <p><strong>Authors:</strong> <span id="publication-authors"></span></p>
+                <p><strong>Published in:</strong> <span id="publication-journal"></span></p>
+                <p><strong>Issue Date:</strong> <span id="publication-issue-date"></span></p>
+                <p><strong>Abstract:</strong> <span id="publication-abstract"></span></p>
+                <p><strong>Details:</strong> <span id="publication-full-details"></span></p>
+                <p><strong>PDF:</strong> <a id="publication-pdf-link" href="#" target="_blank">Download PDF</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright © Shadman Arko</p>
+</div>
+<script>
+    // Get the publication ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const publicationId = urlParams.get('id');
+
+    // Fetch and display publication details
+    fetch('publications.json')
+        .then(response => response.json())
+        .then(publications => {
+            const publication = publications.find(pub => pub.id === publicationId);
+            if (publication) {
+                document.getElementById('publication-title').innerText = publication.title;
+                document.getElementById('publication-authors').innerText = publication.authors;
+                document.getElementById('publication-journal').innerText = publication.journal;
+                document.getElementById('publication-issue-date').innerText = publication.issue_date;
+                document.getElementById('publication-abstract').innerText = publication.abstract;
+                document.getElementById('publication-full-details').innerText = publication.details;
+                document.getElementById('publication-pdf-link').href = publication.pdf_link;
+            }
+        });
+</script>
+</body>
+</html>

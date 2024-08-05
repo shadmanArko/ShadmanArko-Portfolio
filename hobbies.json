@@ -1,0 +1,27 @@
+﻿[
+  {
+    "icon": "fa-gamepad",
+    "title": "Gaming",
+    "description": "I love playing and developing games, exploring new game mechanics, and experiencing different genres."
+  },
+  {
+    "icon": "fa-book",
+    "title": "Reading",
+    "description": "Reading technology blogs, sci-fi novels, and staying updated with the latest in tech and game development."
+  },
+  {
+    "icon": "fa-music",
+    "title": "Music",
+    "description": "Listening to different genres of music, attending live concerts, and exploring new artists and albums."
+  },
+  {
+    "icon": "fa-hiking",
+    "title": "Hiking",
+    "description": "Exploring nature trails, mountains, and enjoying the great outdoors."
+  },
+  {
+    "icon": "fa-camera",
+    "title": "Photography",
+    "description": "Capturing moments and sceneries through the lens, and experimenting with different photography techniques."
+  }
+]

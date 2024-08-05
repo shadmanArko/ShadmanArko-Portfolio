@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/040e13379b.js" crossorigin="anonymous"></script>
+    <title>Reference Detail - Shadman Shahriar Hasan Arko</title>
+</head>
+<body>
+<div id="reference-header">
+    <div class="container">
+        <nav>
+            <h1 class="logoText"><span>Shadman</span> Shahriar Hasan <span>Arko</span></h1>
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<div id="reference-detail">
+    <div class="container">
+        <h1 class="sub-title" id="reference-name">Reference Name</h1>
+        <div class="reference-info">
+            <img id="reference-image" src="" alt="Reference Letter Image">
+            <div class="reference-details" id="reference-details">
+                <p><strong>Position:</strong> <span id="reference-position"></span></p>
+                <p><strong>Company:</strong> <span id="reference-company"></span></p>
+                <p><strong>Date:</strong> <span id="reference-date"></span></p>
+                <p><strong>Details:</strong> <span id="reference-full-details"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright © Shadman Arko</p>
+</div>
+<script>
+    // Get the reference ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const referenceId = urlParams.get('id');
+
+    // Fetch and display reference details
+    fetch('references.json')
+        .then(response => response.json())
+        .then(references => {
+            const reference = references.find(ref => ref.id === referenceId);
+            if (reference) {
+                document.getElementById('reference-name').innerText = reference.name;
+                document.getElementById('reference-position').innerText = reference.position;
+                document.getElementById('reference-company').innerText = reference.company;
+                document.getElementById('reference-date').innerText = reference.date;
+                document.getElementById('reference-full-details').innerText = reference.details;
+                document.getElementById('reference-image').src = reference.letter_image;
+            }
+        });
+</script>
+</body>
+</html>
