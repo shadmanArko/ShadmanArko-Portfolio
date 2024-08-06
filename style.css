@@ -350,7 +350,7 @@ nav ul li a:hover::after {
 }
 
 #services .sub-title {
-    color: #333333;
+    color: #ffffff;
 }
 
 .services-list {
@@ -420,6 +420,7 @@ nav ul li a:hover::after {
 .certificate-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #ff004f;
 }
 
 .certificate-card a {
@@ -457,7 +458,7 @@ nav ul li a:hover::after {
 
 .certificate-info p {
     font-size: 16px;
-    color: #ababab;
+    color: #ffffff;
     margin-bottom: 5px;
 }
 #certificate-details {
@@ -504,7 +505,8 @@ nav ul li a:hover::after {
 /* Publications Section */
 #publications {
     padding: 50px 0;
-    background-color: #f9f9f9; /* Light background to match the theme */
+    background-color: #000000; /* Light background to match the theme */
+    text-align: center;
 }
 
 .publication-list {
@@ -515,13 +517,14 @@ nav ul li a:hover::after {
 }
 
 .publication {
-    background: #fff;
+    background: #1b1b1b;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
 }
+
 
 .publication h3 {
     font-size: 24px;
@@ -531,7 +534,7 @@ nav ul li a:hover::after {
 
 .publication p {
     font-size: 16px;
-    color: #555;
+    color: #ffffff;
 }
 
 .publication a.btn {
@@ -539,19 +542,21 @@ nav ul li a:hover::after {
     margin-top: 20px;
     padding: 10px 20px;
     color: #fff;
-    background-color: #ff004f; /* Match your theme color */
+    background-color: #000000; /* Match your theme color */
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
 }
 
 .publication a.btn:hover {
-    background-color: #e60046; /* Darker shade for hover effect */
+    background-color: #e60046;
+    /* Darker shade for hover effect */
 }
 
 .publication:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #ff004f;
 }
 
 
@@ -718,6 +723,10 @@ form .btn2 {
 #project-header {
     width: 100%;
     background: #080808; /* Ensure a solid background color */
+    text-align: center;
+}
+#portfolio{
+    text-align: center;
 }
 
 #project-detail {
@@ -785,7 +794,8 @@ form .btn2 {
 /* References Section */
 #references {
     padding: 50px 0;
-    background-color: #f9f9f9; /* Light background to match the theme */
+    background-color: #000000; /* Light background to match the theme */
+    text-align: center;
 }
 
 .reference-list {
@@ -796,7 +806,7 @@ form .btn2 {
 }
 
 .reference {
-    background: #fff;
+    background: #1b1b1b;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -812,7 +822,7 @@ form .btn2 {
 
 .reference p {
     font-size: 16px;
-    color: #555;
+    color: #ffffff;
 }
 
 .reference a.btn {
@@ -820,7 +830,7 @@ form .btn2 {
     margin-top: 20px;
     padding: 10px 20px;
     color: #fff;
-    background-color: #ff004f; /* Match your theme color */
+    background-color: #000000; /* Match your theme color */
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
@@ -833,6 +843,7 @@ form .btn2 {
 .reference:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #ff004f;
 }
 
 
@@ -841,6 +852,7 @@ form .btn2 {
 #hobbies {
     padding: 50px 0;
     background-color: #000000; /* Light background to match the theme */
+    text-align: center;
 }
 
 .hobby-list {
